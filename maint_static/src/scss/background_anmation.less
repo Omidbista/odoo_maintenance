@@ -1,0 +1,36 @@
+.animation {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  ul {
+
+    li {
+      position: absolute;
+      width: 35px;
+      list-style: none;
+      opacity: 0;
+      background: radial-gradient(#7a275a, transparent, transparent);
+      height: 35px;
+      left: 10vw;
+      animation: floating_bubbles 3s alternate infinite;
+
+    }
+
+  }
+}
+
+@keyframes floating_bubbles {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}

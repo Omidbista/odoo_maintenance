@@ -1,0 +1,74 @@
+
+body {
+  background-image: url("/maint_static/src/img/background.jpg");
+  background-size: 100%;
+  z-index: -1;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+.odoo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  background: #000000d9;
+
+
+  .odoo-title {
+    font-size: 3vw;
+  }
+
+  .code-block {
+    position: relative;
+    text-transform: uppercase;
+    color: black;
+    -webkit-text-stroke: 1px rgba(131, 131, 131, 0.53);
+    white-space: nowrap;
+
+  }
+
+  .code-block::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    color: #a05680;
+    overflow: hidden;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    -webkit-text-stroke: 0.5px #a05680;
+  }
+
+  @keyframes fade {
+    0% {
+      width: 0;
+      border-right: 1px solid #a05680;
+    }
+    100% {
+      width: 100%;
+      border-right: 5px solid #a05680;
+
+    }
+
+  }
+
+  .version_contents {
+    padding: 10px 0;
+  }
+
+}
+
+
+
+
+
+
